@@ -7,9 +7,19 @@ pipeline{
       }
    }
    stage('test'){ 
+    parallel{
+     stage('running on chrome')
+     {
+     steps{
+     echo "running on chrome"
+     }
+    }
+    stage('running on firefox'){
+    
     steps{
     echo "this is a test stage"
       }
+    }
     }
     stage('deploy'){
      steps{
