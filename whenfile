@@ -3,7 +3,7 @@ pipeline{
    stages{
     stage('1st stage'){
       when {
-        expression ( choice == '1')
+                expression ( choice == '1')
          }
          steps{
            echo "hello choice1"
