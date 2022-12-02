@@ -1,0 +1,28 @@
+pipeline{
+ agent any
+   stages{
+    stage('1st stage'){
+      when {
+        expression ( choice == '1')
+         }
+         steps{
+           echo "hello choice1"
+           }
+           }
+      stage('2nd stage'){
+      when {
+        expression ( choice == '2')
+         }
+         steps{
+           echo "hello choice1"
+           }
+           }
+       stage('3rd stage'){
+      when {
+        expression ( choice == '3')
+         }
+         steps{
+           echo "hello choice1"
+           }
+           }
+        }
